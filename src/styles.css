@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.pager,
+.spacer {
+  min-width: 20px;
+  position: relative;
+  border: 1px solid blue;
+  display: inline-block;
+}
+
+.focus {
+  color: red;
+}
