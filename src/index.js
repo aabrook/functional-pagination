@@ -11,14 +11,14 @@ function App() {
 
   const inputToInt = pipe(
     path(['target', 'value']),
-    (s) => s.trim() !== '' ? parseInt(s.trim()) : 0,
+    (s) => s && s.trim() !== '' ? parseInt(s.trim()) : 0,
     setPageCount
   )
 
   return (
     <div className="App">
       How many pages to show: <input type="number" value={pageCount} onChange={ inputToInt } />
-      <Pagination pages={range(1, pageCount + 1)} count={ 2 } boundsCount={ 1 } index={ index } onSelect={(i => setIndex(i))} />
+      <Pagination pages={range(0, pageCount)} count={ 2 } boundsCount={ 1 } index={ index } onSelect={(i => setIndex(i))} />
     </div>
   );
 }
